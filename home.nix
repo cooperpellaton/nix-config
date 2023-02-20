@@ -103,22 +103,31 @@
     tmux = {
       enable = true;
       terminal = "xterm-256color";
+      shortcut = "a";
+      newSession = true;
+      keyMode = "vi";
+      secureSocket = false;
+      sensibleOnTop = true;
+      plugins = with pkgs; [
+        tmuxPlugins.copycat
+        tmuxPlugins.yank
+        tmuxPlugins.tilish
+        tmuxPlugins.sessionist
+        tmuxPlugins.tmux-colors-solarized
+        {
+          plugin = tmuxPlugins.continuum;
+          extraConfig = ''
+            set -g @continuum-restore 'on'
+            set -g @continuum-save-interval '60' # minutes
+          '';
+        }
+      ];
       extraConfig = ''
-        # remap prefix from 'C-b' to 'C-a'
-        unbind C-b
-        set-option -g prefix C-a
-        bind-key C-a send-prefix
-
         # switch panes using Alt-arrow without prefix
         bind -n M-Left select-pane -L
         bind -n M-Right select-pane -R
         bind -n M-Up select-pane -U
         bind -n M-Down select-pane -D
-
-        # key remapping for naming
-        set-window-option -g automatic-rename on
-        bind-key n command-prompt 'rename-window %%'
-        bind-key N command-prompt 'rename-session %%'
       '';
     };
   };
