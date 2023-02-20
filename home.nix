@@ -6,14 +6,14 @@
 
   home.packages = [
     pkgs.curl
+    pkgs.fortune
     pkgs.fzf
     pkgs.git-lfs
     pkgs.jq
-    pkgs.ripgrep
-    pkgs.wget
     pkgs.mosh
     pkgs.nixfmt
-    pkgs.fortune
+    pkgs.ripgrep
+    pkgs.wget
   ];
 
   programs = {
