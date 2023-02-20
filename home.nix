@@ -5,7 +5,6 @@
   programs.home-manager.enable = true;
 
   home.packages = [
-    pkgs.bat
     pkgs.curl
     pkgs.fzf
     pkgs.git-lfs
@@ -17,6 +16,17 @@
   ];
 
   programs = {
+    bat = {
+      enable = true;
+      config = {
+        theme = "TwoDark";
+        pager = "less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse";
+        map-syntax = [
+          ".ignore:Git Ignore"
+          "h:cpp"
+        ];
+      };
+    };
     git = {
       enable = true;
       userName = "Cooper Pellaton";
@@ -85,6 +95,27 @@
       shellAbbrs = {
         ip = "curl icanhazip.com";
       };
+    };
+    tmux = {
+      enable = true;
+      terminal = "xterm-256color";
+      extraConfig = ''
+        # remap prefix from 'C-b' to 'C-a'
+        unbind C-b
+        set-option -g prefix C-a
+        bind-key C-a send-prefix
+
+        # switch panes using Alt-arrow without prefix
+        bind -n M-Left select-pane -L
+        bind -n M-Right select-pane -R
+        bind -n M-Up select-pane -U
+        bind -n M-Down select-pane -D
+
+        # key remapping for naming
+        set-window-option -g automatic-rename on
+        bind-key n command-prompt 'rename-window %%'
+        bind-key N command-prompt 'rename-session %%'
+      '';
     };
   };
 }
