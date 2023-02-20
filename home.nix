@@ -113,7 +113,12 @@
         tmuxPlugins.yank
         tmuxPlugins.tilish
         tmuxPlugins.sessionist
-        tmuxPlugins.tmux-colors-solarized
+        {
+          plugin = tmuxPlugins.tmux-colors-solarized;
+          extraConfig = ''
+            set -g @colors-solarized 'dark'
+          '';
+        }
         {
           plugin = tmuxPlugins.continuum;
           extraConfig = ''
