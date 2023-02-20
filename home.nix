@@ -5,14 +5,20 @@
   programs.home-manager.enable = true;
 
   home.packages = [
+    #pkgs.avrdude
+    pkgs.coreutils
     pkgs.curl
+    pkgs.exa
     pkgs.fortune
     pkgs.fzf
-    pkgs.git-lfs
     pkgs.jq
     pkgs.mosh
     pkgs.nixfmt
+    pkgs.openssl
+    #pkgs.qmk
     pkgs.ripgrep
+    pkgs.rsync
+    pkgs.tree
     pkgs.wget
   ];
 
@@ -58,6 +64,7 @@
           navigate = true;
         };
       };
+      lfs = { enable = true; };
     };
     fish = {
       enable = true;
