@@ -12,6 +12,7 @@
     pkgs.ripgrep
     pkgs.wget
     pkgs.mosh
+    pkgs.nixfmt
     pkgs.fortune
   ];
 
@@ -19,12 +20,9 @@
     bat = {
       enable = true;
       config = {
-        theme = "TwoDark";
+        theme = "Solarized (dark)";
         pager = "less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse";
-        map-syntax = [
-          ".ignore:Git Ignore"
-          "h:cpp"
-        ];
+        map-syntax = [ ".ignore:Git Ignore" "h:cpp" ];
       };
     };
     git = {
@@ -47,7 +45,7 @@
         pager.reflog = "delta";
         pager.show = "delta";
         url = {
-          "ssh://git@github.com/" = { insteadOf = https://github.com/; };
+          "ssh://git@github.com/" = { insteadOf = "https://github.com/"; };
         };
       };
       delta = {
@@ -69,7 +67,10 @@
         end
       '';
       plugins = [
-        { name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
+        {
+          name = "hydro";
+          src = pkgs.fishPlugins.hydro.src;
+        }
         {
           name = "z";
           src = pkgs.fetchFromGitHub {
@@ -89,12 +90,8 @@
           };
         }
       ];
-      shellAliases = {
-        rm = "rm -i";
-      };
-      shellAbbrs = {
-        ip = "curl icanhazip.com";
-      };
+      shellAliases = { rm = "rm -i"; };
+      shellAbbrs = { ip = "curl icanhazip.com"; };
     };
     tmux = {
       enable = true;

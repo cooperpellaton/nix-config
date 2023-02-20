@@ -9,16 +9,16 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: let
-    arch = "aarch64-darwin";
-  in {
-    defaultPackage.${arch} =
-      home-manager.defaultPackage.${arch};
+  outputs = { nixpkgs, home-manager, ... }: {
+    defaultPackage = {
+      "x86_64-linux" = home-manager.defaultPackage.x86_64-linux;
+      "aarch64-darwin" = home-manager.defaultPackage.aarch64-darwin;
+    };
 
-    homeConfigurations.cooper =
+    homeConfigurations."cooper@cortado" =
       home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${arch};
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [ ./home.nix ];
       };
-    };
+  };
 }
