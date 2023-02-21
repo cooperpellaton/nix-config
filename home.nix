@@ -9,7 +9,6 @@
     pkgs.coreutils
     pkgs.curl
     pkgs.exa
-    pkgs.fortune
     pkgs.fzf
     pkgs.jq
     pkgs.mosh
@@ -68,11 +67,6 @@
     };
     fish = {
       enable = true;
-      interactiveShellInit = ''
-        function fish_greeting
-          fortune
-        end
-      '';
       plugins = [
         {
           name = "hydro";
@@ -94,6 +88,23 @@
             repo = "plugin-git";
             rev = "0d597a23ce2e9a067131effca5aeb1a1068de0d0";
             sha256 = "0c9pm6n6kmad2fih4rlq1sj4p8cng0xjlshba944pv93sx0x3yii";
+          };
+        }
+        {
+          name = "sponge";
+          src = pkgs.fishPlugins.sponge.src;
+        }
+        {
+          name = "foreign-env";
+          src = pkgs.fishPlugins.foreign-env.src;
+        }
+        {
+          name = "nix-env";
+          src = pkgs.fetchFromGitHub {
+            owner = "lilyball";
+            repo = "nix-env.fish";
+            rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
+            hash = "sha256-RG/0rfhgq6aEKNZ0XwIqOaZ6K5S4+/Y5EEMnIdtfPhk";
           };
         }
       ];
