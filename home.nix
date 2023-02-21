@@ -146,5 +146,9 @@
         bind -n M-Down select-pane -D
       '';
     };
+    doom-emacs = {
+      enable = true;
+      doomPrivateDir = ./doom.d;
+   };
   };
 }
