@@ -5,7 +5,6 @@
   programs.home-manager.enable = true;
 
   home.packages = [
-    #pkgs.avrdude
     pkgs.coreutils
     pkgs.curl
     pkgs.exa
@@ -13,9 +12,11 @@
     pkgs.jq
     pkgs.mosh
     pkgs.nixfmt
+    pkgs.nodejs-slim-19_x
     pkgs.openssl
     pkgs.picocom
     #pkgs.qmk
+    #pkgs.usbutils
     pkgs.ripgrep
     pkgs.rust-analyzer
     pkgs.rsync
@@ -151,6 +152,15 @@
     doom-emacs = {
       enable = true;
       doomPrivateDir = ./.doom.d;
+    };
+    kitty = {
+      enable = true;
+      theme = "Solarized Dark";
+      font = { name = "Berkeley Mono"; };
+      keybindings = {
+        "super+v" = "paste_from_clipboard";
+        "super+c" = "copy_or_interrupt";
+      };
     };
   };
 }

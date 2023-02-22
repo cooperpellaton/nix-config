@@ -8,9 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     doom-emacs = {
-         url = "github:nix-community/nix-doom-emacs";
-         inputs.nixpkgs.follows = "nixpkgs";
-      };
+      url = "github:nix-community/nix-doom-emacs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, doom-emacs, ... }: {
@@ -22,7 +22,7 @@
     homeConfigurations."cooper@cortado" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ ./home.nix doom-emacs.hmModule];
+        modules = [ ./home.nix doom-emacs.hmModule ];
       };
   };
 }
