@@ -14,8 +14,10 @@
     pkgs.mosh
     pkgs.nixfmt
     pkgs.openssl
+    pkgs.picocom
     #pkgs.qmk
     pkgs.ripgrep
+    pkgs.rust-analyzer
     pkgs.rsync
     pkgs.tree
     pkgs.wget
@@ -148,7 +150,7 @@
     };
     doom-emacs = {
       enable = true;
-      doomPrivateDir = ./doom.d;
-   };
+      doomPrivateDir = ./.doom.d;
+    };
   };
 }
