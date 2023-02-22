@@ -175,9 +175,7 @@
           autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
         augroup END
         syntax on
-        if !has('gui_running')
-          set t_Co=256
-        endif
+        set t_Co=256
         " Fix backspace so that it works normally
         set backspace=indent,eol,start
         " Show existing tab with 2 spaces width
@@ -244,7 +242,6 @@
         " open new split panes to right and bottom, which feels more natural
         set splitbelow
         set splitright
-
       '';
       plugins = with pkgs; [
         vimPlugins.vim-fugitive
