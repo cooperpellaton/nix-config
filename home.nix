@@ -70,14 +70,14 @@
     };
     fish = {
       enable = true;
-      plugins = [
+      plugins = with pkgs; [
         {
           name = "hydro";
-          src = pkgs.fishPlugins.hydro.src;
+          src = fishPlugins.hydro.src;
         }
         {
           name = "z";
-          src = pkgs.fetchFromGitHub {
+          src = fetchFromGitHub {
             owner = "jethrokuan";
             repo = "z";
             rev = "e0e1b9dfdba362f8ab1ae8c1afc7ccf62b89f7eb";
@@ -86,7 +86,7 @@
         }
         {
           name = "plugin-git";
-          src = pkgs.fetchFromGitHub {
+          src = fetchFromGitHub {
             owner = "jhillyerd";
             repo = "plugin-git";
             rev = "0d597a23ce2e9a067131effca5aeb1a1068de0d0";
@@ -95,15 +95,15 @@
         }
         {
           name = "sponge";
-          src = pkgs.fishPlugins.sponge.src;
+          src = fishPlugins.sponge.src;
         }
         {
           name = "foreign-env";
-          src = pkgs.fishPlugins.foreign-env.src;
+          src = fishPlugins.foreign-env.src;
         }
         {
           name = "nix-env";
-          src = pkgs.fetchFromGitHub {
+          src = fetchFromGitHub {
             owner = "lilyball";
             repo = "nix-env.fish";
             rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
