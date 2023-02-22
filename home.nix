@@ -200,30 +200,6 @@
         " pres // to stop highlighting results
         nmap <silent> // :nohlsearch<CR>
 
-        """"""""""
-        " VISUAL "
-        """"""""""
-        " lightline config.
-        let g:lightline = {
-              \ 'colorscheme': 'wombat',
-              \ 'active': {
-              \   'left': [ [ 'mode', 'paste' ],
-              \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-              \ },
-              \ 'component_function': {
-              \   'gitbranch': 'FugitiveHead'
-              \ },
-              \ }
-
-        """""""""""
-        " Echodoc "
-        """""""""""
-        let g:echodoc#enable_at_startup = 1
-        let g:echodoc#type = 'floating'
-        " To use a custom highlight for the float window,
-        " change Pmenu to your highlight group
-        highlight link EchoDocFloat Pmenu
-
         """""""""""""""
         " Indent Line "
         """""""""""""""
@@ -243,17 +219,40 @@
         set splitbelow
         set splitright
       '';
-      plugins = with pkgs; [
-        vimPlugins.vim-fugitive
-        vimPlugins.supertab
-        vimPlugins.lightline-vim
-        vimPlugins.vim-gitgutter
-        vimPlugins.vim-wordmotion
-        vimPlugins.vim-endwise
-        vimPlugins.float-preview-nvim
-        vimPlugins.echodoc
-        vimPlugins.tagbar
-        vimPlugins.vim-smoothie
+      plugins = with pkgs.vimPlugins; [
+        vim-fugitive
+        supertab
+        {
+          plugin = lightline-vim;
+          config = ''
+            let g:lightline = {
+                  \ 'colorscheme': 'wombat',
+                  \ 'active': {
+                  \   'left': [ [ 'mode', 'paste' ],
+                  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+                  \ },
+                  \ 'component_function': {
+                  \   'gitbranch': 'FugitiveHead'
+                  \ },
+                  \ }
+          '';
+        }
+        vim-gitgutter
+        vim-wordmotion
+        vim-endwise
+        float-preview-nvim
+        {
+          plugin = echodoc;
+          config = ''
+            let g:echodoc#enable_at_startup = 1
+            let g:echodoc#type = 'floating'
+            " To use a custom highlight for the float window,
+            " change Pmenu to your highlight group
+            highlight link EchoDocFloat Pmenu
+          '';
+        }
+        tagbar
+        vim-smoothie
       ];
     };
   };
