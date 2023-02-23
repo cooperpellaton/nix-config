@@ -50,7 +50,7 @@
     git = {
       enable = true;
       userName = "Cooper Pellaton";
-      userEmail = "c@cepp.ch";
+      userEmail = "cooper.pellaton@hu.ma.ne";
       extraConfig = {
         credential.helper = "store";
         merge.conflictstyle = "diff3";
