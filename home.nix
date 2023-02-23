@@ -1,10 +1,13 @@
 { pkgs, ... }: {
+  home.username = "cooper";
+  home.homeDirectory = "/Users/cooper";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
 
   home.packages = [
     pkgs.coreutils
     pkgs.curl
+    pkgs.cmake
     pkgs.exa
     pkgs.fzf
     pkgs.jq
@@ -88,6 +91,7 @@
         }
         {
           name = "z";
+
           src = fetchFromGitHub {
             owner = "jethrokuan";
             repo = "z";
