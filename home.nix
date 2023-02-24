@@ -125,7 +125,6 @@
       plugins = with pkgs; [
         tmuxPlugins.copycat
         tmuxPlugins.yank
-        tmuxPlugins.tilish
         tmuxPlugins.sessionist
         {
           plugin = tmuxPlugins.tmux-colors-solarized;
