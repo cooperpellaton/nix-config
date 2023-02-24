@@ -48,10 +48,6 @@
         diff.compactionHeuristic = true;
         rebase.autoStash = true;
         fetch.prune = true;
-        pager.diff = "delta";
-        pager.log = "delta";
-        pager.reflog = "delta";
-        pager.show = "delta";
         url = {
           "ssh://git@github.com/" = { insteadOf = "https://github.com/"; };
         };
