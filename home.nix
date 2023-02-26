@@ -15,7 +15,7 @@
     pkgs.nodejs-slim-19_x
     pkgs.openssl
     pkgs.picocom
-    #pkgs.qmk
+    pkgs.qmk
     #pkgs.usbutils
     pkgs.ripgrep
     pkgs.rust-analyzer
