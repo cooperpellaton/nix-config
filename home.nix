@@ -1,44 +1,46 @@
 { pkgs, ... }: {
-  home.username = "cooper";
-  home.homeDirectory = "/Users/cooper";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
 
-  home.packages = [
-    pkgs.coreutils
-    pkgs.curl
-    pkgs.cmake
-    pkgs.exa
-    pkgs.fzf
-    pkgs.jq
-    pkgs.mosh
-    pkgs.nixfmt
-    pkgs.nodejs-slim-19_x
-    pkgs.openssl
-    pkgs.picocom
-    #pkgs.qmk
-    #pkgs.usbutils
-    pkgs.ripgrep
-    pkgs.rust-analyzer
-    pkgs.rsync
-    pkgs.tree
-    pkgs.wget
+  home.packages = with pkgs; [
+    coreutils
+    curl
+    cmake
+    exa
+    fzf
+    jq
+    mosh
+    nixfmt
+    nodejs-slim-19_x
+    openssl
+    picocom
+    #qmk
+    usbutils
+    ripgrep
+    rust-analyzer
+    rsync
+    tree
+    wget
     # work stuff
-    pkgs.ffmpeg_5
-    pkgs.opencv
-    pkgs.terraform
-    pkgs.terraform-docs
-    pkgs.htop
-    pkgs.gnupg
-    pkgs.gnutls
-    pkgs.hadolint
-    pkgs.bitwarden-cli
-    pkgs.awscli2
-    pkgs.google-cloud-sdk
-    pkgs.go
-    pkgs.pre-commit
-    pkgs.jwt-cli
-    pkgs.glfw
+    ffmpeg_5
+    opencv
+    terraform
+    terraform-docs
+    htop
+    glances
+    gnupg
+    gnutls
+    hadolint
+    bitwarden-cli
+    awscli2
+    google-cloud-sdk
+    go
+    pre-commit
+    jwt-cli
+    glfw
+    dive
+    gradle
+    flatbuffers
   ];
 
   programs = {
