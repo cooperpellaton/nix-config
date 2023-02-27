@@ -58,6 +58,7 @@
           minus-style = "syntax #340001";
           syntax-theme = "Solarized (dark)";
           navigate = true;
+          side-by-side = true;
         };
       };
       lfs = { enable = true; };
