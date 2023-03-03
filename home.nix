@@ -15,12 +15,13 @@
     openssl
     picocom
     #qmk
-    usbutils
+    #usbutils
     ripgrep
     rust-analyzer
     rsync
     tree
     wget
+    zoxide
     # work stuff
     ffmpeg_5
     opencv
