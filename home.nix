@@ -111,11 +111,11 @@
     };
     tmux = {
       enable = true;
+      mouse = true;
       terminal = "xterm-256color";
       shortcut = "a";
       newSession = true;
       keyMode = "vi";
-      secureSocket = false;
       sensibleOnTop = true;
       plugins = with pkgs; [
         tmuxPlugins.copycat
