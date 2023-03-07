@@ -42,6 +42,7 @@
     dive
     gradle
     flatbuffers
+    clang-tools_15
   ];
 
   programs = {
