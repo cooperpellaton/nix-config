@@ -8,6 +8,7 @@
     cmake
     exa
     fzf
+    gh
     jq
     mosh
     nixfmt
