@@ -37,17 +37,18 @@
       userName = "Cooper Pellaton";
       userEmail = "c@cepp.ch";
       extraConfig = {
-        credential.helper = "store";
-        merge.conflictstyle = "diff3";
-        rerere.enabled = 1;
+        branch.autosetuprebase = "always";
         color.ui = true;
-        push.default = "tracking";
-        push.autoSetupRemote = true;
+        credential.helper = "store";
         diff.renames = "copies";
         diff.mnemonicprefix = true;
         diff.compactionHeuristic = true;
-        rebase.autoStash = true;
         fetch.prune = true;
+        merge.conflictstyle = "diff3";
+        push.default = "tracking";
+        push.autoSetupRemote = true;
+        rebase.autoStash = true;
+        rerere.enabled = 1;
         url = {
           "ssh://git@github.com/" = { insteadOf = "https://github.com/"; };
         };
