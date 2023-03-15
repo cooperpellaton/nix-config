@@ -11,9 +11,13 @@
       url = "github:nix-community/nix-doom-emacs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    emacs = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, doom-emacs, ... }: {
+  outputs = { nixpkgs, home-manager, doom-emacs, ... }@inputs: {
     defaultPackage = {
       "x86_64-linux" = home-manager.defaultPackage.x86_64-linux;
       "aarch64-darwin" = home-manager.defaultPackage.aarch64-darwin;
@@ -29,6 +33,7 @@
             home.username = "cooper";
             home.homeDirectory = "/Users/cooper";
           }
+          { nixpkgs.overlays = [ inputs.emacs.overlay ]; }
         ];
       };
   };
