@@ -9,6 +9,7 @@
     exa
     fzf
     gh
+    glances
     jq
     mosh
     nixfmt
@@ -24,26 +25,25 @@
     wget
     zoxide
     # work stuff
+    awscli2
+    bitwarden-cli
+    clang-tools_15
+    dive
     ffmpeg_5
-    opencv
-    terraform
-    terraform-docs
-    htop
-    glances
+    flatbuffers
     gnupg
     gnutls
-    hadolint
-    bitwarden-cli
-    awscli2
-    google-cloud-sdk
-    go
-    pre-commit
-    jwt-cli
     glfw
-    dive
+    go
+    google-cloud-sdk
     gradle
-    flatbuffers
-    clang-tools_15
+    hadolint
+    htop
+    jwt-cli
+    opencv
+    pre-commit
+    terraform
+    terraform-docs
   ];
 
   programs = {
