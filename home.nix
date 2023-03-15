@@ -64,6 +64,7 @@
         rerere.enabled = 1;
         color.ui = true;
         push.default = "tracking";
+        push.autoSetupRemote = true;
         diff.renames = "copies";
         diff.mnemonicprefix = true;
         diff.compactionHeuristic = true;
@@ -94,16 +95,6 @@
           src = fishPlugins.hydro.src;
         }
         {
-          name = "z";
-
-          src = fetchFromGitHub {
-            owner = "jethrokuan";
-            repo = "z";
-            rev = "e0e1b9dfdba362f8ab1ae8c1afc7ccf62b89f7eb";
-            sha256 = "0dbnir6jbwjpjalz14snzd3cgdysgcs3raznsijd6savad3qhijc";
-          };
-        }
-        {
           name = "plugin-git";
           src = fetchFromGitHub {
             owner = "jhillyerd";
@@ -132,6 +123,7 @@
       ];
       shellAliases = { rm = "rm -i"; };
       shellAbbrs = { ip = "curl icanhazip.com"; };
+      loginShellInit = "zoxide init fish | source";
     };
     tmux = {
       enable = true;
