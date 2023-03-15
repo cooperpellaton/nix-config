@@ -7,6 +7,7 @@
     curl
     exa
     fzf
+    gh
     jq
     mosh
     nixfmt
