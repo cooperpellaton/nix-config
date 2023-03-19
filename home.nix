@@ -42,6 +42,7 @@
     jwt-cli
     opencv
     pre-commit
+    shellcheck
     terraform
     terraform-docs
   ];
