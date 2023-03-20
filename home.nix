@@ -125,7 +125,10 @@
         }
       ];
       shellAliases = { rm = "rm -i"; };
-      shellAbbrs = { ip = "curl icanhazip.com"; };
+      shellAbbrs = {
+        ip = "curl icanhazip.com";
+        ec = "emacsclient -t";
+      };
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
@@ -166,6 +169,7 @@
       enable = true;
       doomPrivateDir = ./.doom.d;
     };
+    emacs.enable = true;
     kitty = {
       enable = true;
       theme = "Solarized Dark";
