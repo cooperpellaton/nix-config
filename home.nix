@@ -10,6 +10,7 @@
     fzf
     gh
     glances
+    iperf
     jq
     mosh
     nixfmt
@@ -21,6 +22,7 @@
     ripgrep
     rust-analyzer
     rsync
+    openssh
     tree
     wget
     zoxide
