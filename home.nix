@@ -12,6 +12,7 @@
     mosh
     nixfmt
     nodejs-slim-19_x
+    openssh
     openssl
     picocom
     #qmk
@@ -102,7 +103,10 @@
         }
       ];
       shellAliases = { rm = "rm -i"; };
-      shellAbbrs = { ip = "curl icanhazip.com"; };
+      shellAbbrs = {
+        ip = "curl icanhazip.com";
+        ec = "emacsclient -t";
+      };
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
@@ -140,6 +144,7 @@
         bind -n M-Down select-pane -D
       '';
     };
+    emacs.enable = true;
     doom-emacs = {
       enable = true;
       doomPrivateDir = ./.doom.d;
