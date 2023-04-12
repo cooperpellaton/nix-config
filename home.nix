@@ -128,7 +128,6 @@
       ];
       shellAliases = { rm = "rm -i"; };
       shellAbbrs = {
-        ip = "curl icanhazip.com";
         ec = "emacsclient -t";
       };
       loginShellInit = "zoxide init fish | source";
