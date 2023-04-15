@@ -22,7 +22,6 @@
     ripgrep
     rust-analyzer
     rsync
-    openssh
     tree
     wget
     zoxide
