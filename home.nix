@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     coreutils
     curl
-    cmake
+    #cmake
     exa
     fzf
     gh
