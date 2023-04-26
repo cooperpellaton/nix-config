@@ -3,10 +3,12 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    automake
     coreutils
     curl
-    #cmake
+    cmake
     exa
+    fd
     fzf
     gh
     glances
@@ -43,6 +45,7 @@
     jwt-cli
     opencv
     pre-commit
+    protobuf
     shellcheck
     terraform
     terraform-docs
