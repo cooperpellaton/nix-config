@@ -43,6 +43,7 @@
     hadolint
     htop
     jwt-cli
+    minicom
     opencv
     pre-commit
     protobuf
