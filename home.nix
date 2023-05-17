@@ -19,6 +19,7 @@
     nodejs-slim-19_x
     openssl
     picocom
+    pigz
     #qmk
     #usbutils
     ripgrep
