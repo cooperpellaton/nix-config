@@ -47,7 +47,6 @@
             home.username = "Cooper";
             home.homeDirectory = "/Users/Cooper";
           }
-
         ];
       };
 
@@ -61,7 +60,6 @@
             home.username = "cooper";
             home.homeDirectory = "/home/cooper";
           }
-
         ];
       };
   };

@@ -13,10 +13,12 @@
     gh
     glances
     iperf
+    gh
     jq
     mosh
     nixfmt
-    nodejs-slim-19_x
+    nodejs-slim
+    openssh
     openssl
     picocom
     pigz
@@ -131,9 +133,6 @@
         }
       ];
       shellAliases = { rm = "rm -i"; };
-      shellAbbrs = {
-        ec = "emacsclient -t";
-      };
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
@@ -174,7 +173,6 @@
       enable = true;
       doomPrivateDir = ./.doom.d;
     };
-    emacs.enable = true;
     kitty = {
       enable = true;
       theme = "Solarized Dark";
