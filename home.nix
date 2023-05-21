@@ -11,7 +11,7 @@
     jq
     mosh
     nixfmt
-    nodejs-slim-19_x
+    nodejs-slim
     openssh
     openssl
     picocom
