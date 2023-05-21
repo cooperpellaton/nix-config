@@ -18,7 +18,6 @@
     mosh
     nixfmt
     nodejs-slim
-    openssh
     openssl
     picocom
     pigz
