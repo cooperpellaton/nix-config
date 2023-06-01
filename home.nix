@@ -1,18 +1,12 @@
 { pkgs, ... }: {
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    automake
     coreutils
     curl
-    cmake
     exa
-    fd
     fzf
-    gh
-    glances
-    iperf
     gh
     jq
     mosh
@@ -20,7 +14,7 @@
     nodejs-slim
     openssl
     picocom
-    pigz
+    pre-commit
     #qmk
     #usbutils
     ripgrep
@@ -109,6 +103,10 @@
         }
       ];
       shellAliases = { rm = "rm -i"; };
+      shellAbbrs = {
+        ip = "curl icanhazip.com";
+        ec = "emacsclient -t";
+      };
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
@@ -118,6 +116,7 @@
       shortcut = "a";
       newSession = true;
       keyMode = "vi";
+      secureSocket = false;
       sensibleOnTop = true;
       plugins = with pkgs; [
         tmuxPlugins.copycat
@@ -145,6 +144,7 @@
         bind -n M-Down select-pane -D
       '';
     };
+    emacs.enable = true;
     doom-emacs = {
       enable = true;
       doomPrivateDir = ./.doom.d;
