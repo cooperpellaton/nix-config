@@ -29,29 +29,6 @@
     tree
     wget
     zoxide
-    # work stuff
-    awscli2
-    bitwarden-cli
-    clang-tools_15
-    dive
-    ffmpeg_5
-    flatbuffers
-    gnupg
-    gnutls
-    glfw
-    go
-    google-cloud-sdk
-    gradle
-    hadolint
-    htop
-    jwt-cli
-    minicom
-    opencv
-    pre-commit
-    protobuf
-    shellcheck
-    terraform
-    terraform-docs
   ];
 
   programs = {
@@ -66,7 +43,7 @@
     git = {
       enable = true;
       userName = "Cooper Pellaton";
-      userEmail = "cooper.pellaton@hu.ma.ne";
+      userEmail = "c@cepp.ch";
       extraConfig = {
         branch.autosetuprebase = "always";
         color.ui = true;

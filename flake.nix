@@ -42,6 +42,7 @@
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [
           ./home.nix
+          ./work.nix
           doom-emacs.hmModule
           {
             home.username = "Cooper";
@@ -55,6 +56,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ./home.nix
+          ./work.nix
           doom-emacs.hmModule
           {
             home.username = "cooper";
