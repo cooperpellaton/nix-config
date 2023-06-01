@@ -12,7 +12,6 @@
     mosh
     nixfmt
     nodejs-slim
-    openssh
     openssl
     picocom
     pre-commit
