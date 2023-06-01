@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
@@ -15,6 +15,7 @@
     openssh
     openssl
     picocom
+    pre-commit
     #qmk
     #usbutils
     ripgrep
