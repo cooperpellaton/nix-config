@@ -5,6 +5,8 @@
     awscli2
     bitwarden-cli
     clang-tools_15
+    cmake
+    cmake-format
     dive
     ffmpeg_5
     flatbuffers
