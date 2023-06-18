@@ -18,7 +18,7 @@
     #qmk
     #usbutils
     ripgrep
-    rust-analyzer
+    rustup
     rsync
     tree
     wget
