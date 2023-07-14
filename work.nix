@@ -28,5 +28,9 @@
     yamllint
   ];
 
-  programs.git.userEmail = lib.mkForce "cooper.pellaton@hu.ma.ne";
+  programs = {
+    git.userEmail = lib.mkForce "cooper.pellaton@hu.ma.ne";
+    direnv.enable = true;
+    direnv.nix-direnv.enable = true;
+  };
 }

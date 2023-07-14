@@ -53,14 +53,14 @@
 
     homeConfigurations."cooper@lungo" =
       home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [
           ./home.nix
           ./work.nix
           doom-emacs.hmModule
           {
             home.username = "cooper";
-            home.homeDirectory = "/home/cooper";
+            home.homeDirectory = "/Users/cooper";
           }
         ];
       };
