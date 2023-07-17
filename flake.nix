@@ -37,7 +37,7 @@
         ];
       };
 
-    homeConfigurations."Cooper@cappuccino" =
+    homeConfigurations."cooper@cappuccino" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [
@@ -45,8 +45,8 @@
           ./work.nix
           doom-emacs.hmModule
           {
-            home.username = "Cooper";
-            home.homeDirectory = "/Users/Cooper";
+            home.username = "cooper";
+            home.homeDirectory = "/Users/cooper";
           }
         ];
       };
