@@ -23,6 +23,7 @@
     opencv
     protobuf
     shellcheck
+    teleport
     terraform
     terraform-docs
     yamllint
