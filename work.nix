@@ -19,6 +19,7 @@
     hadolint
     htop
     jwt-cli
+    llvmPackages_16.libllvm
     minicom
     opencv
     protobuf
