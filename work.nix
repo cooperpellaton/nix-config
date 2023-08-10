@@ -22,6 +22,7 @@
     llvmPackages_16.libllvm
     minicom
     opencv
+    poetry
     protobuf
     shellcheck
     teleport
