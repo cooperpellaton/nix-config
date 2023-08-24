@@ -29,6 +29,7 @@
     # teleport
     terraform
     terraform-docs
+    unixtools.watch
     yamllint
   ];
 
