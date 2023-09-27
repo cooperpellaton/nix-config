@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     coreutils
     curl
-    exa
+    eza
     fzf
     gh
     jq

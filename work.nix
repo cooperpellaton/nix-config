@@ -10,13 +10,14 @@
     dive
     ffmpeg_5
     flatbuffers
+    git-repo
     gnupg
     gnutls
     glfw
     go
     google-cloud-sdk
     gradle
-    hadolint
+    # hadolint
     htop
     jwt-cli
     llvmPackages_16.libllvm
@@ -25,7 +26,7 @@
     poetry
     protobuf
     shellcheck
-    teleport
+    # teleport
     terraform
     terraform-docs
     yamllint
