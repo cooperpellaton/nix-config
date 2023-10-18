@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    awscli2
     bitwarden-cli
     clang-tools_15
     cmake
@@ -22,7 +21,6 @@
     jwt-cli
     llvmPackages_16.libllvm
     minicom
-    opencv
     poetry
     protobuf
     shellcheck
