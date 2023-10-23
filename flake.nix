@@ -18,12 +18,16 @@
   };
 
   outputs = { nixpkgs, home-manager, doom-emacs, ... }@inputs: {
-    defaultPackage = {
-      "x86_64-linux" = home-manager.defaultPackage.x86_64-linux;
-      "aarch64-darwin" = home-manager.defaultPackage.aarch64-darwin;
+    packages = {
+      "x86_64-linux" = {
+        default = home-manager.defaultPackage.x86_64-linux;
+      };
+      "aarch64-darwin" = {
+        default = home-manager.defaultPackage.aarch64-darwin;
+      };
     };
 
-    homeConfigurations."cooper@cortado" =
+    homeConfigurations."cooper@americano" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [

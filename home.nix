@@ -53,6 +53,7 @@
         push.autoSetupRemote = true;
         rebase.autoStash = true;
         rerere.enabled = 1;
+        submodule.recurse = true;
         url = {
           "ssh://git@github.com/" = { insteadOf = "https://github.com/"; };
         };
