@@ -24,7 +24,7 @@
     poetry
     protobuf
     shellcheck
-    # teleport
+    teleport
     terraform
     terraform-docs
     unixtools.watch
