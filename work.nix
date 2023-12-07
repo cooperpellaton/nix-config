@@ -6,6 +6,7 @@
     clang-tools_15
     cmake
     cmake-format
+    darwin.lsusb
     dive
     dotnetPackages.Nuget
     ffmpeg_5
