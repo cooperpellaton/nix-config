@@ -99,15 +99,13 @@
           src = fetchFromGitHub {
             owner = "kidonng";
             repo = "nix.fish";
-            rev = "9578c80e6c1eeb5350ea91be417fab0cd16849ca";
-            hash = "sha256-8voSACANtI4XaD1NRdueptSCu/0VqOejRLFuBtjOSoc=";
+            rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
+            hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
           };
         }
       ];
       shellAliases = { rm = "rm -i"; };
-      shellAbbrs = {
-        ec = "emacsclient -t";
-      };
+      shellAbbrs = { ec = "emacsclient -t"; };
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
