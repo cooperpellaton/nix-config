@@ -7,6 +7,7 @@
     cmake
     cmake-format
     dive
+    dotnetPackages.Nuget
     ffmpeg_5
     flatbuffers
     git-repo
@@ -24,6 +25,7 @@
     poetry
     protobuf
     shellcheck
+    shfmt
     teleport
     terraform
     terraform-docs
