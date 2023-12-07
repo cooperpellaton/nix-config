@@ -3,7 +3,6 @@
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
 
-
   home.packages = with pkgs; [
     coreutils
     curl
@@ -83,8 +82,8 @@
           src = fetchFromGitHub {
             owner = "jhillyerd";
             repo = "plugin-git";
-            rev = "0d597a23ce2e9a067131effca5aeb1a1068de0d0";
-            sha256 = "0c9pm6n6kmad2fih4rlq1sj4p8cng0xjlshba944pv93sx0x3yii";
+            rev = "c2b38f53f0b04bc67f9a0fa3d583bafb3f558718";
+            hash = "sha256-efKPbsXxjHm1wVWPJCV8teG4DgZN5dshEzX8PWuhKo4=";
           };
         }
         {
@@ -96,18 +95,17 @@
           src = fishPlugins.foreign-env.src;
         }
         {
-          name = "nix-env";
+          name = "nix-fish";
           src = fetchFromGitHub {
-            owner = "lilyball";
-            repo = "nix-env.fish";
-            rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
-            hash = "sha256-RG/0rfhgq6aEKNZ0XwIqOaZ6K5S4+/Y5EEMnIdtfPhk";
+            owner = "kidonng";
+            repo = "nix.fish";
+            rev = "9578c80e6c1eeb5350ea91be417fab0cd16849ca";
+            hash = "sha256-8voSACANtI4XaD1NRdueptSCu/0VqOejRLFuBtjOSoc=";
           };
         }
       ];
       shellAliases = { rm = "rm -i"; };
       shellAbbrs = {
-        ip = "curl icanhazip.com";
         ec = "emacsclient -t";
       };
       loginShellInit = "zoxide init fish | source";
