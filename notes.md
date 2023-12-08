@@ -9,15 +9,16 @@ nix-prefetch-github owner repo --nix
 For example:
 
 ```sh
-[nix-shell:~/Developer/nix-prefetch]$ nix-prefetch-github kidonng kidonng --nix
+[nix-shell:~/Developer]$ nix-prefetch-github kidonng nix.fish --nix
 let
   pkgs = import <nixpkgs> {};
 in
   pkgs.fetchFromGitHub {
     owner = "kidonng";
-    repo = "kidonng";
-    rev = "9578c80e6c1eeb5350ea91be417fab0cd16849ca";
-    hash = "sha256-8voSACANtI4XaD1NRdueptSCu/0VqOejRLFuBtjOSoc=";
+    repo = "nix.fish";
+    rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
+    hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
   }
+
 
 ```
