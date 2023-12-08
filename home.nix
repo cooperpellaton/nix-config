@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     coreutils
     curl
+    erlang
     eza
     fzf
     gh
