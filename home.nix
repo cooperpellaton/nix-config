@@ -144,11 +144,6 @@
         bind -n M-Down select-pane -D
       '';
     };
-    emacs.enable = true;
-    doom-emacs = {
-      enable = true;
-      doomPrivateDir = ./.doom.d;
-    };
     kitty = {
       enable = true;
       theme = "Solarized Dark";
