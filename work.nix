@@ -8,7 +8,6 @@
     cmake-format
     darwin.lsusb
     dive
-    dotnetPackages.Nuget
     ffmpeg_5
     flatbuffers
     git-repo
@@ -16,7 +15,6 @@
     gnutls
     glfw
     go
-    google-cloud-sdk
     gradle
     # hadolint
     htop
