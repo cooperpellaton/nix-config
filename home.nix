@@ -147,8 +147,8 @@
     };
     kitty = {
       enable = true;
-      theme = "Solarized Dark";
-      font = { name = "Berkeley Mono"; };
+      theme = "Solarized Dark - Patched";
+      font = { name = "Berkeley Mono"; size = 13; };
       keybindings = { "super+v" = "paste_from_clipboard"; };
     };
     neovim = {
