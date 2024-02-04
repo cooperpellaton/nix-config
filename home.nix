@@ -14,7 +14,7 @@
     jq
     mosh
     nixfmt
-    nodejs-slim
+    nodejs_20
     openssl
     picocom
     pre-commit
