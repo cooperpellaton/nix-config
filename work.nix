@@ -23,6 +23,7 @@
     minicom
     poetry
     protobuf
+    python310
     shellcheck
     shfmt
     teleport
