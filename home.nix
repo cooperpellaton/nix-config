@@ -30,6 +30,21 @@
     zoxide
   ];
 
+
+  xdg.configFile."zed/settings.json".text = ''
+    {
+      "telemetry": {
+        "metrics": false
+      },
+      "theme": "Rosé Pine",
+      "buffer_font_size": 13,
+      "buffer_font_family": "Berkeley Mono",
+      "vim_mode": true,
+      "relative_line_numbers": true,
+      "soft_wrap": "preferred_line_length"
+    }
+  '';
+
   programs = {
     bat = {
       enable = true;
