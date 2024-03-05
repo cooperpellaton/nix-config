@@ -1,11 +1,9 @@
 { pkgs, config, lib, ... }:
 
 {
+  # More tools are installed in per-repo devshells
   home.packages = with pkgs; [
     bitwarden-cli
-    clang-tools_15
-    cmake
-    cmake-format
     darwin.lsusb
     dive
     ffmpeg_5
@@ -15,15 +13,9 @@
     gnutls
     glfw
     go
-    gradle
     # hadolint
     htop
     jwt-cli
-    llvmPackages_16.libllvm
-    minicom
-    poetry
-    protobuf
-    python39
     shellcheck
     shfmt
     teleport
