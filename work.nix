@@ -9,12 +9,11 @@
     bitwarden-cli
     darwin.lsusb
     dive
-    ffmpeg_5
+    ffmpeg
     flatbuffers
     git-repo
     gnupg
     gnutls
-    glfw
     go
     # hadolint
     htop

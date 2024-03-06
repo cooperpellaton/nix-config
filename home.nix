@@ -6,14 +6,13 @@
     btop
     coreutils
     curl
-    erlang
     eza
     fzf
     gh
     jq
     mosh
     nixfmt
-    nodejs_20
+    nodejs-slim
     openssl
     picocom
     pre-commit
