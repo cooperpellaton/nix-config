@@ -1,6 +1,9 @@
 { pkgs, config, lib, ... }:
 
 {
+  # have to do this for terraform
+  nixpkgs.config.allowUnfree = true;
+
   # More tools are installed in per-repo devshells
   home.packages = with pkgs; [
     bitwarden-cli
