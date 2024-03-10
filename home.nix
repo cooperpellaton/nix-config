@@ -26,7 +26,6 @@
     zoxide
   ];
 
-
   xdg.configFile."zed/settings.json".text = ''
     {
       "telemetry": {
@@ -161,7 +160,10 @@
     kitty = {
       enable = true;
       theme = "Solarized Dark - Patched";
-      font = { name = "Berkeley Mono"; size = 13; };
+      font = {
+        name = "Berkeley Mono";
+        size = 13;
+      };
       keybindings = { "super+v" = "paste_from_clipboard"; };
     };
     neovim = {
