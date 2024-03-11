@@ -49,6 +49,10 @@
         map-syntax = [ ".ignore:Git Ignore" "h:cpp" ];
       };
     };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
     git = {
       enable = true;
       userName = "Cooper Pellaton";
