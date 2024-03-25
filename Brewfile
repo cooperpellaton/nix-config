@@ -4,10 +4,12 @@ cask "adobe-creative-cloud"
 cask "anki"
 cask "arc"
 cask "barrier"
+cask "bartender"
 cask "dash"
 cask "discord"
 cask "figma"
 cask "gitbutler"
+cask "handbrake"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "monodraw"
@@ -25,7 +27,9 @@ cask "steermouse"
 cask "sublime-merge"
 cask "sublime-text"
 cask "transmit"
+cask "vial"
 cask "visual-studio-code"
+cask "vlc"
 cask "zed"
 cask "zoom"
 mas "1Blocker", id: 1365531024
@@ -39,6 +43,7 @@ mas "Ivory", id: 6444602274
 mas "Keynote", id: 409183694
 mas "LiquidText", id: 922765270
 mas "Muse", id: 1501563902
+mas "Noir", id: 1592917505
 mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "OmniFocus", id: 1542143627
