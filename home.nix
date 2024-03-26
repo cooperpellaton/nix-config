@@ -9,6 +9,7 @@
     eza
     fzf
     gh
+    git-town
     jq
     mosh
     nixfmt
