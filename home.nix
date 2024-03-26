@@ -97,12 +97,7 @@
         }
         {
           name = "plugin-git";
-          src = fetchFromGitHub {
-            owner = "jhillyerd";
-            repo = "plugin-git";
-            rev = "c2b38f53f0b04bc67f9a0fa3d583bafb3f558718";
-            hash = "sha256-efKPbsXxjHm1wVWPJCV8teG4DgZN5dshEzX8PWuhKo4=";
-          };
+          src = fishPlugins.plugin-git.src;
         }
         {
           name = "sponge";
