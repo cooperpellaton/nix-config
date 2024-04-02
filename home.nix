@@ -13,7 +13,6 @@
     jq
     mosh
     nixfmt
-    nodejs-slim
     openssl
     picocom
     pre-commit
