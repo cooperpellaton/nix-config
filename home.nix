@@ -54,6 +54,39 @@
       enable = true;
       nix-direnv.enable = true;
     };
+    fish = {
+      enable = true;
+      plugins = with pkgs; [
+        {
+          name = "hydro";
+          src = fishPlugins.hydro.src;
+        }
+        {
+          name = "plugin-git";
+          src = fishPlugins.plugin-git.src;
+        }
+        {
+          name = "sponge";
+          src = fishPlugins.sponge.src;
+        }
+        {
+          name = "foreign-env";
+          src = fishPlugins.foreign-env.src;
+        }
+        {
+          name = "nix-fish";
+          src = fetchFromGitHub {
+            owner = "kidonng";
+            repo = "nix.fish";
+            rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
+            hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
+          };
+        }
+      ];
+      shellAliases = {rm = "rm -i";};
+      shellAbbrs = {ec = "emacsclient -t";};
+      loginShellInit = "zoxide init fish | source";
+    };
     git = {
       enable = true;
       userName = "Cooper Pellaton";
@@ -88,74 +121,6 @@
         };
       };
       lfs = {enable = true;};
-    };
-    fish = {
-      enable = true;
-      plugins = with pkgs; [
-        {
-          name = "hydro";
-          src = fishPlugins.hydro.src;
-        }
-        {
-          name = "plugin-git";
-          src = fishPlugins.plugin-git.src;
-        }
-        {
-          name = "sponge";
-          src = fishPlugins.sponge.src;
-        }
-        {
-          name = "foreign-env";
-          src = fishPlugins.foreign-env.src;
-        }
-        {
-          name = "nix-fish";
-          src = fetchFromGitHub {
-            owner = "kidonng";
-            repo = "nix.fish";
-            rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
-            hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
-          };
-        }
-      ];
-      shellAliases = {rm = "rm -i";};
-      shellAbbrs = {ec = "emacsclient -t";};
-      loginShellInit = "zoxide init fish | source";
-    };
-    tmux = {
-      enable = true;
-      mouse = true;
-      terminal = "xterm-256color";
-      shortcut = "a";
-      newSession = true;
-      keyMode = "vi";
-      secureSocket = false;
-      sensibleOnTop = true;
-      plugins = with pkgs; [
-        tmuxPlugins.copycat
-        tmuxPlugins.yank
-        tmuxPlugins.sessionist
-        {
-          plugin = tmuxPlugins.tmux-colors-solarized;
-          extraConfig = ''
-            set -g @colors-solarized 'dark'
-          '';
-        }
-        {
-          plugin = tmuxPlugins.continuum;
-          extraConfig = ''
-            set -g @continuum-restore 'on'
-            set -g @continuum-save-interval '60' # minutes
-          '';
-        }
-      ];
-      extraConfig = ''
-        # switch panes using Alt-arrow without prefix
-        bind -n M-Left select-pane -L
-        bind -n M-Right select-pane -R
-        bind -n M-Up select-pane -U
-        bind -n M-Down select-pane -D
-      '';
     };
     kitty = {
       enable = true;
@@ -261,6 +226,41 @@
         tagbar
         vim-smoothie
       ];
+    };
+    tmux = {
+      enable = true;
+      mouse = true;
+      terminal = "xterm-256color";
+      shortcut = "a";
+      newSession = true;
+      keyMode = "vi";
+      secureSocket = false;
+      sensibleOnTop = true;
+      plugins = with pkgs; [
+        tmuxPlugins.copycat
+        tmuxPlugins.yank
+        tmuxPlugins.sessionist
+        {
+          plugin = tmuxPlugins.tmux-colors-solarized;
+          extraConfig = ''
+            set -g @colors-solarized 'dark'
+          '';
+        }
+        {
+          plugin = tmuxPlugins.continuum;
+          extraConfig = ''
+            set -g @continuum-restore 'on'
+            set -g @continuum-save-interval '60' # minutes
+          '';
+        }
+      ];
+      extraConfig = ''
+        # switch panes using Alt-arrow without prefix
+        bind -n M-Left select-pane -L
+        bind -n M-Right select-pane -R
+        bind -n M-Up select-pane -U
+        bind -n M-Down select-pane -D
+      '';
     };
   };
 }
