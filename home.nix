@@ -11,7 +11,6 @@
     git-town
     jq
     mosh
-    nixfmt
     openssl
     picocom
     pre-commit
