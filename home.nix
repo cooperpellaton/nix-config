@@ -1,9 +1,8 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.stateVersion = "23.11";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    btop
     coreutils
     curl
     eza
@@ -46,8 +45,12 @@
       config = {
         theme = "Solarized (dark)";
         pager = "less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse";
-        map-syntax = [ ".ignore:Git Ignore" "h:cpp" ];
+        map-syntax = [".ignore:Git Ignore" "h:cpp"];
       };
+    };
+    btop = {
+      enable = true;
+      settings = {color_theme = "solarized_dark";};
     };
     direnv = {
       enable = true;
@@ -72,7 +75,7 @@
         rerere.enabled = 1;
         submodule.recurse = true;
         url = {
-          "ssh://git@github.com/" = { insteadOf = "https://github.com/"; };
+          "ssh://git@github.com/" = {insteadOf = "https://github.com/";};
         };
       };
       delta = {
@@ -86,7 +89,7 @@
           side-by-side = true;
         };
       };
-      lfs = { enable = true; };
+      lfs = {enable = true;};
     };
     fish = {
       enable = true;
@@ -117,8 +120,8 @@
           };
         }
       ];
-      shellAliases = { rm = "rm -i"; };
-      shellAbbrs = { ec = "emacsclient -t"; };
+      shellAliases = {rm = "rm -i";};
+      shellAbbrs = {ec = "emacsclient -t";};
       loginShellInit = "zoxide init fish | source";
     };
     tmux = {
@@ -163,7 +166,7 @@
         name = "Berkeley Mono";
         size = 13;
       };
-      keybindings = { "super+v" = "paste_from_clipboard"; };
+      keybindings = {"super+v" = "paste_from_clipboard";};
     };
     neovim = {
       enable = true;

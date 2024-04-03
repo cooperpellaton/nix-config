@@ -1,5 +1,6 @@
 repos:
-  - repo: https://github.com/nix-community/nixpkgs-fmt
-    rev: v1.3.0
+  - repo: https://github.com/kamadorueda/alejandra
+    rev: e53c2c6
     hooks:
-    -   id: nixpkgs-fmt
+      # Requires Nix to be previously installed in the system
+      - id: alejandra-nix
