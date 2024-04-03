@@ -16,7 +16,6 @@
     pre-commit
     python311
     python311Packages.ipython
-    #qmk
     #usbutils
     ripgrep
     rustup
