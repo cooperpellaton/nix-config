@@ -56,33 +56,22 @@
     };
     fish = {
       enable = true;
-      plugins = with pkgs; [
-        {
-          name = "hydro";
-          src = fishPlugins.hydro.src;
-        }
-        {
-          name = "plugin-git";
-          src = fishPlugins.plugin-git.src;
-        }
-        {
-          name = "sponge";
-          src = fishPlugins.sponge.src;
-        }
-        {
-          name = "foreign-env";
-          src = fishPlugins.foreign-env.src;
-        }
-        {
-          name = "nix-fish";
-          src = fetchFromGitHub {
-            owner = "kidonng";
-            repo = "nix.fish";
-            rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
-            hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
-          };
-        }
-      ];
+      plugins =
+        map (n: {
+          name = n;
+          src = pkgs.fishPlugins.${n}.src;
+        }) ["hydro" "plugin-git" "sponge" "foreign-env"]
+        ++ [
+          {
+            name = "nix-fish";
+            src = pkgs.fetchFromGitHub {
+              owner = "kidonng";
+              repo = "nix.fish";
+              rev = "ad57d970841ae4a24521b5b1a68121cf385ba71e";
+              hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
+            };
+          }
+        ];
       shellAliases = {rm = "rm -i";};
       shellAbbrs = {ec = "emacsclient -t";};
       loginShellInit = "zoxide init fish | source";
