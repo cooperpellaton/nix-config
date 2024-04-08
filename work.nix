@@ -1,6 +1,9 @@
-{ pkgs, config, lib, ... }:
-
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   # have to do this for terraform
   nixpkgs.config.allowUnfree = true;
 
@@ -28,6 +31,6 @@
   ];
 
   programs = {
-    git.userEmail = lib.mkForce "cooper.pellaton@hu.ma.ne";
+    git.userEmail = lib.mkForce "cooper@Humane.com";
   };
 }
