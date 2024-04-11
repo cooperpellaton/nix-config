@@ -30,7 +30,7 @@
     yamllint
   ];
 
-  xdg.configFile.".ideavimrc".text = ''
+  xdg.configFile."ideavim/ideavimrc".text = ''
     set clipboard+=unnamed
     set relativenumber number
   '';
