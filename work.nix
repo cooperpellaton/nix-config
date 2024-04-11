@@ -30,6 +30,11 @@
     yamllint
   ];
 
+  xdg.configFile.".ideavimrc".text = ''
+    set clipboard+=unnamed
+    set relativenumber number
+  '';
+
   programs = {
     git.userEmail = lib.mkForce "cooper@humane.com";
   };
