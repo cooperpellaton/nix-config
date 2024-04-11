@@ -31,6 +31,6 @@
   ];
 
   programs = {
-    git.userEmail = lib.mkForce "cooper@Humane.com";
+    git.userEmail = lib.mkForce "cooper@humane.com";
   };
 }
