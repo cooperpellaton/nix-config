@@ -11,8 +11,6 @@
     git-town
     jq
     mosh
-    openssl
-    picocom
     pre-commit
     python311
     python311Packages.ipython
@@ -20,6 +18,7 @@
     ripgrep
     rustup
     rsync
+    tio
     zoxide
   ];
 
