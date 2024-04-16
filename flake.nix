@@ -7,20 +7,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    doom-emacs = {
-      url = "github:nix-community/nix-doom-emacs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    emacs = {
-      url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    doom-emacs,
     ...
   } @ inputs: {
     packages = {
@@ -36,12 +27,10 @@
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       modules = [
         ./home.nix
-        doom-emacs.hmModule
         {
           home.username = "cooper";
           home.homeDirectory = "/Users/cooper";
         }
-        {nixpkgs.overlays = [inputs.emacs.overlay];}
       ];
     };
 
@@ -50,7 +39,6 @@
       modules = [
         ./home.nix
         ./work.nix
-        doom-emacs.hmModule
         {
           home.username = "cooper";
           home.homeDirectory = "/Users/cooper";
@@ -63,7 +51,6 @@
       modules = [
         ./home.nix
         ./work.nix
-        doom-emacs.hmModule
         {
           home.username = "cooper";
           home.homeDirectory = "/Users/cooper";
