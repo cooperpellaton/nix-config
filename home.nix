@@ -28,8 +28,9 @@
         "metrics": false
       },
       "theme": "Rosé Pine",
-      "buffer_font_size": 13,
+      "buffer_font_size": 14,
       "buffer_font_family": "Berkeley Mono",
+      "ui_font_family": "Berkeley Mono",
       "vim_mode": true,
       "relative_line_numbers": true,
       "soft_wrap": "preferred_line_length"
