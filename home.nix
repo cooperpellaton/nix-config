@@ -13,7 +13,6 @@
     pre-commit
     python311
     python311Packages.ipython
-    #usbutils
     ripgrep
     rustup
     rsync
