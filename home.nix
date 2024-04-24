@@ -8,7 +8,6 @@
     eza
     fzf
     gh
-    git-town
     jq
     mosh
     pre-commit
