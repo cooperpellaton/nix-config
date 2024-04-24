@@ -70,7 +70,12 @@
             };
           }
         ];
-      shellAliases = {rm = "rm -i";};
+      shellAliases = {
+        rm = "rm -i";
+        ls = "eza";
+        la = "eza -la";
+        ll = "eza -ll";
+      };
       shellAbbrs = {ec = "emacsclient -t";};
       loginShellInit = "zoxide init fish | source";
     };
