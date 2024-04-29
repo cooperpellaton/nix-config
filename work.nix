@@ -19,7 +19,6 @@
     gnutls
     go
     # hadolint
-    htop
     jwt-cli
     shellcheck
     shfmt
