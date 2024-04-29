@@ -19,6 +19,7 @@
     go
     # hadolint
     jwt-cli
+    pigz
     shellcheck
     shfmt
     teleport
