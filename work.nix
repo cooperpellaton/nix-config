@@ -13,7 +13,6 @@
     darwin.lsusb
     dive
     ffmpeg
-    flatbuffers
     git-repo
     gnupg
     gnutls
