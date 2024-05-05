@@ -3,7 +3,6 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    coreutils
     curl
     eza
     fzf
@@ -17,6 +16,7 @@
     rustup
     rsync
     tio
+    uutils-coreutils-noprefix
     zoxide
   ];
 
