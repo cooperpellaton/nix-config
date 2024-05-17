@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.stateVersion = "23.11";
   programs.home-manager.enable = true;
 
@@ -114,7 +118,7 @@
       };
       lfs = {enable = true;};
     };
-    kitty = {
+    kitty = lib.mkIf (pkgs.stdenv.isLinux) {
       enable = true;
       theme = "Solarized Dark - Patched";
       font = {
