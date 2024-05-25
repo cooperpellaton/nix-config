@@ -194,7 +194,7 @@
           plugin = lightline-vim;
           config = ''
             let g:lightline = {
-                  \ 'colorscheme': 'wombat',
+                  \ 'colorscheme': 'selenized_dark',
                   \ 'active': {
                   \   'left': [ [ 'mode', 'paste' ],
                   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
