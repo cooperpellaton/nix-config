@@ -3,7 +3,7 @@ To calculate a valid block for a repo:
 
 ```sh
 nix-shell -p nix-prefetch-github
-nix-prefetch-github owner repo --nix
+nix-prefetch-github $owner $repo --nix
 ```
 
 For example:
