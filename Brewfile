@@ -3,8 +3,7 @@ brew "mas"
 cask "adobe-creative-cloud"
 cask "anki"
 cask "arc"
-cask "barrier"
-cask "bartender"
+cask "betterdisplay"
 cask "dash"
 cask "discord"
 cask "figma"
@@ -15,9 +14,11 @@ cask "jetbrains-toolbox"
 cask "monodraw"
 cask "nextcloud"
 cask "notion"
+cask "obsidian"
 cask "omnidisksweeper"
 cask "opal-composer"
 cask "paw"
+cask "signal"
 cask "sketch"
 cask "slack"
 cask "sonos"
@@ -55,14 +56,13 @@ mas "PCalc", id: 403504866
 mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "Save to Reader", id: 1640236961
+mas "Sink It for Reddit", id: 6449873635
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Vimari", id: 1480933944
 mas "VooV", id: 1497685373
 mas "WeChat", id: 836500024
 mas "Xcode", id: 497799835
-vscode "arrterian.nix-env-selector"
-vscode "bbenoist.nix"
 vscode "charliermarsh.ruff"
 vscode "davidanson.vscode-markdownlint"
 vscode "eamodio.gitlens"
@@ -71,9 +71,9 @@ vscode "exiasr.hadolint"
 vscode "foxundermoon.shell-format"
 vscode "ginfuru.ginfuru-better-solarized-dark-theme"
 vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-pull-request-github"
-vscode "jnoortheen.nix-ide"
-vscode "mkhl.direnv"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
@@ -87,8 +87,6 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "ms-vsliveshare.vsliveshare-pack"
-vscode "mvllow.rose-pine"
-vscode "pinage404.nix-extension-pack"
 vscode "redhat.vscode-yaml"
 vscode "sissel.shopify-liquid"
 vscode "tamasfe.even-better-toml"
