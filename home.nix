@@ -35,7 +35,16 @@
       "ui_font_family": "Berkeley Mono",
       "vim_mode": true,
       "relative_line_numbers": true,
-      "soft_wrap": "preferred_line_length"
+      "soft_wrap": "preferred_line_length",
+      "assistant": {
+        "version": "1",
+        "provider": {
+          "name": "ollama"
+        }
+      },
+      "auto_install_extensions": {
+        "Git Firefly": true
+      }
     }
   '';
 
