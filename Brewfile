@@ -8,6 +8,7 @@ cask "betterdisplay"
 cask "cardhop"
 cask "chatgpt"
 cask "cleanshot"
+cask "copilot"
 cask "dash"
 cask "devonthink"
 cask "discord"
@@ -18,6 +19,7 @@ cask "gitbutler"
 cask "handbrake"
 cask "iterm2"
 cask "jetbrains-toolbox"
+cask "jordanbaird-ice"
 cask "monodraw"
 cask "nextcloud"
 cask "notion"
@@ -36,11 +38,14 @@ cask "spotify"
 cask "steermouse"
 cask "sublime-merge"
 cask "sublime-text"
+cask "superhuman"
 cask "tailscale"
 cask "transmit"
+cask "uhk-agent"
 cask "vial"
 cask "visual-studio-code"
 cask "vlc"
+cask "webex"
 cask "zed"
 cask "zoom"
 mas "1Blocker", id: 1365531024
@@ -49,6 +54,7 @@ mas "BBEdit", id: 404009241
 mas "Bike", id: 1588292384
 mas "Darkroom", id: 953286746
 mas "Fantastical", id: 975937182
+mas "Goodnotes", id: 1444383602
 mas "Infuse", id: 1136220934
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 409183694
