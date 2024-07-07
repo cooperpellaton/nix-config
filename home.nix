@@ -8,7 +8,6 @@
 
   home.packages = with pkgs; [
     curl
-    difftastic
     eza
     fzf
     gh
@@ -115,16 +114,8 @@
           "ssh://git@github.com/" = {insteadOf = "https://github.com/";};
         };
       };
-      delta = {
+      difftastic = {
         enable = true;
-        options = {
-          line-numbers = true;
-          plus-style = "syntax #012800";
-          minus-style = "syntax #340001";
-          syntax-theme = "Solarized (dark)";
-          navigate = true;
-          side-by-side = true;
-        };
       };
       lfs = {enable = true;};
     };
