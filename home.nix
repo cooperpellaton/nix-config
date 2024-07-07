@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     curl
+    difftastic
     eza
     fzf
     gh
