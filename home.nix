@@ -105,6 +105,7 @@
         diff.mnemonicprefix = true;
         diff.compactionHeuristic = true;
         fetch.prune = true;
+        init.defaultBranch = "main";
         merge.conflictstyle = "diff3";
         push.default = "tracking";
         push.autoSetupRemote = true;
