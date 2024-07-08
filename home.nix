@@ -11,6 +11,7 @@
     eza
     fzf
     gh
+    jujutsu
     jq
     mosh
     pre-commit
