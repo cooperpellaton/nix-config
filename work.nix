@@ -6,7 +6,8 @@
 }: {
   # More tools are installed in per-repo devshells
   home.packages = with pkgs; [
-    bitwarden-cli
+    # re-enable when not broken
+    # bitwarden-cli
     darwin.lsusb
     dive
     ffmpeg
@@ -19,7 +20,7 @@
     pigz
     shellcheck
     shfmt
-    teleport
+    teleport_14
     unixtools.watch
     yamllint
   ];
