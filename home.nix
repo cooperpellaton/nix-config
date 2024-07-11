@@ -30,7 +30,7 @@
       "telemetry": {
         "metrics": false
       },
-      "theme": "Rosé Pine",
+      "theme": "Solarized Dark",
       "buffer_font_size": 14,
       "buffer_font_family": "Berkeley Mono",
       "ui_font_family": "Berkeley Mono",
