@@ -32,5 +32,6 @@
 
   programs = {
     git.userEmail = lib.mkForce "cooper@humane.com";
+    jujutsu.settings.user.email = lib.mkForce "cooper@humane.com";
   };
 }

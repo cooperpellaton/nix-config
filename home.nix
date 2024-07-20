@@ -11,7 +11,6 @@
     eza
     fzf
     gh
-    jujutsu
     jq
     mosh
     pre-commit
@@ -120,6 +119,15 @@
         enable = true;
       };
       lfs = {enable = true;};
+    };
+    jujutsu = {
+      enable = true;
+      settings = {
+        user = {
+          name = "Cooper Pellaton";
+          email = "c@cepp.ch";
+        };
+      };
     };
     kitty = lib.mkIf (pkgs.stdenv.isLinux) {
       enable = true;
