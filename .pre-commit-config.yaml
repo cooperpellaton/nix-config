@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/kamadorueda/alejandra
-    rev: e53c2c6
+    rev: d7552fef2ccf1bbf0d36b27f6fddb19073f205b7
     hooks:
       # Requires Nix to be previously installed in the system
       - id: alejandra-nix
