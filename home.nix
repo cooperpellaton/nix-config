@@ -240,7 +240,6 @@
       settings = {
         theme = "solarized-dark";
       };
-      enableFishIntegration = true;
     };
   };
 }
