@@ -232,42 +232,15 @@
         }
         tagbar
         vim-smoothie
+        zellij-nvim
       ];
     };
-    tmux = {
+    zellij = {
       enable = true;
-      mouse = true;
-      terminal = "xterm-256color";
-      shortcut = "a";
-      newSession = true;
-      keyMode = "vi";
-      secureSocket = false;
-      sensibleOnTop = true;
-      plugins = with pkgs; [
-        tmuxPlugins.copycat
-        tmuxPlugins.yank
-        tmuxPlugins.sessionist
-        {
-          plugin = tmuxPlugins.tmux-colors-solarized;
-          extraConfig = ''
-            set -g @colors-solarized 'dark'
-          '';
-        }
-        {
-          plugin = tmuxPlugins.continuum;
-          extraConfig = ''
-            set -g @continuum-restore 'on'
-            set -g @continuum-save-interval '60' # minutes
-          '';
-        }
-      ];
-      extraConfig = ''
-        # switch panes using Alt-arrow without prefix
-        bind -n M-Left select-pane -L
-        bind -n M-Right select-pane -R
-        bind -n M-Up select-pane -U
-        bind -n M-Down select-pane -D
-      '';
+      settings = {
+        theme = "solarized-dark";
+      };
+      enableFishIntegration = true;
     };
   };
 }
