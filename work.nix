@@ -20,7 +20,7 @@
     pigz
     shellcheck
     shfmt
-    teleport_14
+    teleport
     unixtools.watch
     yamllint
   ];
