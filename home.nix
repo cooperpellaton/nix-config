@@ -43,7 +43,8 @@
         }
       },
       "auto_install_extensions": {
-        "Git Firefly": true
+        "Git Firefly": true,
+        "Catppuccin Themes": true
       }
     }
   '';
