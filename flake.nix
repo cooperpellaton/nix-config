@@ -34,14 +34,14 @@
       ];
     };
 
-    homeConfigurations."cooper@cappuccino" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."Cooper@cappuccino" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       modules = [
         ./home.nix
         ./work.nix
         {
-          home.username = "cooper";
-          home.homeDirectory = "/Users/cooper";
+          home.username = "Cooper";
+          home.homeDirectory = "/Users/Cooper";
         }
       ];
     };
