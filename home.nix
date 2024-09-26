@@ -34,7 +34,9 @@
       "buffer_font_family": "Berkeley Mono",
       "ui_font_family": "Berkeley Mono",
       "vim_mode": true,
-      "relative_line_numbers": true,
+      "vim": {
+        "toggle_relative_line_numbers": true
+      },
       "soft_wrap": "preferred_line_length",
       "assistant": {
         "version": "1",
