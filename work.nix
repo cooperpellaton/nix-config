@@ -22,6 +22,7 @@
     shfmt
     teleport
     unixtools.watch
+    uv
     yamllint
   ];
 
