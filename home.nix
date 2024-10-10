@@ -51,6 +51,11 @@
     }
   '';
 
+  xdg.configFile."ideavim/ideavimrc".text = ''
+    set clipboard+=unnamed
+    set relativenumber number
+  '';
+
   programs = {
     bat = {
       enable = true;

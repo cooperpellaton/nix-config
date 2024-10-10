@@ -26,11 +26,6 @@
     yamllint
   ];
 
-  xdg.configFile."ideavim/ideavimrc".text = ''
-    set clipboard+=unnamed
-    set relativenumber number
-  '';
-
   programs = {
     git.userEmail = lib.mkForce "cooper@humane.com";
     jujutsu.settings.user.email = lib.mkForce "cooper@humane.com";
