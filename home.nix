@@ -29,7 +29,7 @@
       "telemetry": {
         "metrics": false
       },
-      "theme": "Catppuccin Latte",
+      "theme": "Solarized Light",
       "buffer_font_size": 14,
       "buffer_font_family": "Berkeley Mono",
       "ui_font_family": "Berkeley Mono",
@@ -45,8 +45,7 @@
         }
       },
       "auto_install_extensions": {
-        "Git Firefly": true,
-        "Catppuccin Themes": true
+        "Git Firefly": true
       }
     }
   '';
