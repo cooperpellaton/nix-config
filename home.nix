@@ -24,36 +24,37 @@
     zoxide
   ];
 
-  xdg.configFile."zed/settings.json".text = ''
-    {
-      "telemetry": {
-        "metrics": false
-      },
-      "theme": "Solarized Light",
-      "buffer_font_size": 14,
-      "buffer_font_family": "Berkeley Mono",
-      "ui_font_family": "Berkeley Mono",
-      "vim_mode": true,
-      "vim": {
-        "toggle_relative_line_numbers": true
-      },
-      "soft_wrap": "preferred_line_length",
-      "assistant": {
-        "version": "1",
-        "provider": {
-          "name": "ollama"
+  xdg.configFile = {
+    "zed/settings.json".text = ''
+      {
+        "telemetry": {
+          "metrics": false
+        },
+        "theme": "Solarized Light",
+        "buffer_font_size": 14,
+        "buffer_font_family": "Berkeley Mono",
+        "ui_font_family": "Berkeley Mono",
+        "vim_mode": true,
+        "vim": {
+          "toggle_relative_line_numbers": true
+        },
+        "soft_wrap": "preferred_line_length",
+        "assistant": {
+          "version": "1",
+          "provider": {
+            "name": "ollama"
+          }
+        },
+        "auto_install_extensions": {
+          "Git Firefly": true
         }
-      },
-      "auto_install_extensions": {
-        "Git Firefly": true
       }
-    }
-  '';
-
-  xdg.configFile."ideavim/ideavimrc".text = ''
-    set clipboard+=unnamed
-    set relativenumber number
-  '';
+    '';
+    "ideavim/ideavimrc".text = ''
+      set clipboard+=unnamed
+      set relativenumber number
+    '';
+  };
 
   programs = {
     bat = {
