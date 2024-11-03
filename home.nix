@@ -13,9 +13,10 @@
     gh
     jq
     mosh
+    nixd
     pre-commit
-    python311
-    python311Packages.ipython
+    python312
+    python312Packages.ipython
     ripgrep
     rustup
     rsync
