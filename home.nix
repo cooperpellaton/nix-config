@@ -30,17 +30,28 @@
         "telemetry": {
           "metrics": false
         },
-        "theme": "Solarized Dark",
+        "theme": {
+            "mode": "system",
+            "light": "Solarized Light",
+            "dark": "Solarized Dark",
+        },
         "buffer_font_size": 14,
         "buffer_font_family": "Berkeley Mono",
-        "ui_font_family": "Berkeley Mono",
         "vim_mode": true,
         "vim": {
           "toggle_relative_line_numbers": true
         },
         "soft_wrap": "preferred_line_length",
+        "assistant": {
+            "version": "2",
+            "enabled": true,
+            "default_model": {
+                "provider": "ollama",
+                "model": "llama3.2:latest"
+            }
+        },
         "auto_install_extensions": {
-          "Git Firefly": true
+          "git_firefly": true
         }
       }
     '';
