@@ -20,3 +20,11 @@ in
     hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
   }
 ```
+
+## Maintaing Brewfile
+
+Checkout this branch, rebase on main `grbom` and then:
+
+```sh
+rm -rf Brewfile && brew bundle dump
+```
