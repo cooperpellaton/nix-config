@@ -26,3 +26,11 @@ in
 * [Nix Storage optimization](https://nixos.wiki/wiki/Storage_optimization)
 * [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world)
 * [mitchellh's nixos-config](https://github.com/mitchellh/nixos-config)
+
+## Maintaing Brewfile
+
+Checkout this branch, rebase on main `grbom` and then:
+
+```sh
+rm -rf Brewfile && brew bundle dump
+```
