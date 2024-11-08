@@ -105,6 +105,10 @@
       };
       shellAbbrs = {ec = "emacsclient -t";};
       loginShellInit = "zoxide init fish | source";
+      interactiveShellInit =
+        if pkgs.stdenv.isDarwin
+        then "fish_add_path /opt/homebrew/bin"
+        else "";
     };
     git = {
       enable = true;
