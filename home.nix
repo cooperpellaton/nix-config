@@ -149,7 +149,7 @@
     };
     kitty = lib.mkIf (pkgs.stdenv.isLinux) {
       enable = true;
-      themeFile = "Solarized_Dark_-_Patched";
+      themeFile = "selenized-dark";
       font = {
         name = "Berkeley Mono";
         size = 13;
