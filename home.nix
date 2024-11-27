@@ -60,6 +60,11 @@
       set clipboard+=unnamed
       set relativenumber number
     '';
+    "ghostty/config".text = ''
+      font-family = Berkeley Mono
+      font-size = 14
+      theme = Solarized Dark Higher Contrast
+    '';
   };
 
   programs = {
