@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
@@ -150,15 +150,6 @@
           email = "c@cepp.ch";
         };
       };
-    };
-    kitty = lib.mkIf (pkgs.stdenv.isLinux) {
-      enable = true;
-      themeFile = "selenized-dark";
-      font = {
-        name = "Berkeley Mono";
-        size = 13;
-      };
-      keybindings = {"super+v" = "paste_from_clipboard";};
     };
     neovim = {
       enable = true;
