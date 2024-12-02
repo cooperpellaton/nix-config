@@ -64,6 +64,15 @@
       font-family = Berkeley Mono
       font-size = 14
       theme = Solarized Dark Higher Contrast
+      cursor-style = bar
+    '';
+    "zellij/layouts/minimal.kdl".text = ''
+      layout {
+        pane
+        pane size=1 borderless=true {
+                plugin location="zellij:compact-bar"
+            }
+        }
     '';
   };
 
@@ -252,6 +261,13 @@
       enable = true;
       settings = {
         theme = "solarized-dark";
+        ui = {
+          pane_frames = {
+            rounded_corners = true;
+            hide_session_name = true;
+          };
+        };
+        default_layout = "minimal";
       };
     };
   };
