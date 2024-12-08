@@ -11,6 +11,7 @@
     eza
     fzf
     gh
+    glow
     jq
     mosh
     nixd
@@ -93,6 +94,19 @@
       enable = true;
       nix-direnv.enable = true;
     };
+    helix = {
+      enable = true;
+      settings = {
+        theme = "solarized_dark";
+        editor = {
+          line-number = "relative";
+          lsp.display-messages = true;
+          indent-guides.render = true;
+          indent-guides.character = "┆";
+          indent-guides.skip-levels = 1;
+        };
+      };
+    };
     fish = {
       enable = true;
       plugins =
@@ -117,7 +131,6 @@
         la = "eza -la";
         ll = "eza -ll";
       };
-      shellAbbrs = {ec = "emacsclient -t";};
       loginShellInit = "zoxide init fish | source";
       interactiveShellInit =
         lib.mkIf pkgs.stdenv.isDarwin
