@@ -27,6 +27,17 @@
   ];
 
   xdg.configFile = {
+    "doom".source = ./doom;
+    "ghostty/config".text = ''
+      font-family = Berkeley Mono
+      font-size = 14
+      theme = Solarized Dark Higher Contrast
+      cursor-style = bar
+    '';
+    "ideavim/ideavimrc".text = ''
+      set clipboard+=unnamed
+      set relativenumber number
+    '';
     "zed/settings.json".text = ''
       {
         "telemetry": {
@@ -57,16 +68,6 @@
         }
       }
     '';
-    "ideavim/ideavimrc".text = ''
-      set clipboard+=unnamed
-      set relativenumber number
-    '';
-    "ghostty/config".text = ''
-      font-family = Berkeley Mono
-      font-size = 14
-      theme = Solarized Dark Higher Contrast
-      cursor-style = bar
-    '';
     "zellij/layouts/minimal.kdl".text = ''
       layout {
         pane
@@ -94,18 +95,8 @@
       enable = true;
       nix-direnv.enable = true;
     };
-    helix = {
+    emacs = {
       enable = true;
-      settings = {
-        theme = "solarized_dark";
-        editor = {
-          line-number = "relative";
-          lsp.display-messages = true;
-          indent-guides.render = true;
-          indent-guides.character = "┆";
-          indent-guides.skip-levels = 1;
-        };
-      };
     };
     fish = {
       enable = true;
