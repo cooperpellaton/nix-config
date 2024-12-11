@@ -1,9 +1,11 @@
 {
+  config,
   pkgs,
   lib,
   ...
 }: let
   isDarwin = pkgs.stdenv.isDarwin;
+  doomPath = "${config.home.homeDirectory}/.config/home-manager/doom";
 in {
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -29,7 +31,8 @@ in {
   ];
 
   xdg.configFile = {
-    "doom".source = ./doom;
+    # ht https://nixos-and-flakes.thiscute.world/best-practices/accelerating-dotfiles-debugging
+    "doom".source = config.lib.file.mkOutOfStoreSymlink doomPath;
     "ghostty/config".text = ''
       font-family = Berkeley Mono
       font-size = 14
