@@ -20,3 +20,7 @@ in
     hash = "sha256-GMV0GyORJ8Tt2S9wTCo2lkkLtetYv0rc19aA5KJbo48=";
   }
 ```
+
+## inspo + docs
+* [Documentation.](https://nix-community.github.io/home-manager/index.xhtml)
+* [mitchellh's nixos-config](https://github.com/mitchellh/nixos-config)

@@ -2,7 +2,9 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  isDarwin = pkgs.stdenv.isDarwin;
+in {
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 
@@ -86,6 +88,7 @@
         pager = "less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse";
         map-syntax = [".ignore:Git Ignore" "h:cpp"];
       };
+      extraPackages = with pkgs.bat-extras; [batman];
     };
     btop = {
       enable = true;
@@ -122,10 +125,14 @@
         la = "eza -la";
         ll = "eza -ll";
       };
+      shellAbbrs = {ec = "emacsclient -c -a 'emacs' -nw";};
       loginShellInit = "zoxide init fish | source";
       interactiveShellInit =
-        lib.mkIf pkgs.stdenv.isDarwin
-        "fish_add_path /opt/homebrew/bin";
+        lib.mkIf isDarwin
+        ''
+          fish_add_path /opt/homebrew/bin
+          batman --export-env | source
+        '';
     };
     git = {
       enable = true;
@@ -275,4 +282,6 @@
       };
     };
   };
+  # Emacs daemon
+  # services.emacs.enable = true;
 }

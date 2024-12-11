@@ -1,13 +1,12 @@
 {
   pkgs,
-  config,
   lib,
   ...
-}: {
+}: let
+  email = "cooper@humane.com";
+in {
   # More tools are installed in per-repo devshells
   home.packages = with pkgs; [
-    # re-enable when not broken
-    # bitwarden-cli
     darwin.lsusb
     dive
     ffmpeg
@@ -27,7 +26,7 @@
   ];
 
   programs = {
-    git.userEmail = lib.mkForce "cooper@humane.com";
-    jujutsu.settings.user.email = lib.mkForce "cooper@humane.com";
+    git.userEmail = lib.mkForce email;
+    jujutsu.settings.user.email = lib.mkForce email;
   };
 }
