@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  email = "cooper@humane.com";
+  workEmail = "cooper@humane.com";
 in {
   # More tools are installed in per-repo devshells
   home.packages = with pkgs; [
@@ -26,7 +26,7 @@ in {
   ];
 
   programs = {
-    git.userEmail = lib.mkForce email;
-    jujutsu.settings.user.email = lib.mkForce email;
+    git.userEmail = lib.mkForce workEmail;
+    jujutsu.settings.user.email = lib.mkForce workEmail;
   };
 }
