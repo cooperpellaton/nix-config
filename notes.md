@@ -23,4 +23,6 @@ in
 
 ## inspo + docs
 * [Documentation.](https://nix-community.github.io/home-manager/index.xhtml)
+* [Nix Storage optimization](https://nixos.wiki/wiki/Storage_optimization)
+* [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world)
 * [mitchellh's nixos-config](https://github.com/mitchellh/nixos-config)

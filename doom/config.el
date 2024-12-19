@@ -34,6 +34,23 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-solarized-dark)
 
+;; Use automatic detection of system appearance to set the theme.
+;; The plugin is installed via packages.el.
+;; Enable once this merges: https://github.com/doomemacs/doomemacs/issues/8119
+; (use-package! auto-dark
+;   :hook (doom-init-ui . auto-dark-mode)
+;   ;; set your favorite themes
+;   :config
+;   (setq auto-dark-dark-theme 'doom-solarized-dark)
+;   (setq auto-dark-light-theme 'doom-one-light))
+;   ;;(setq! auto-dark-themes '((doom-solarized-dark) (doom-one-light)))
+;   ;;(auto-dark-mode))
+
+;; We use emacs compiled from Nix so we add the below to improve
+;; automatic theme detection
+;; h/t https://github.com/LionyxML/auto-dark-emacs?tab=readme-ov-file#notes-for-macos-users
+;; (setq auto-dark-allow-osascript t)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)

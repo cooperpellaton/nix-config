@@ -18,6 +18,7 @@ in {
     glow
     jq
     mosh
+    nil
     nixd
     pre-commit
     python312
@@ -26,6 +27,7 @@ in {
     rustup
     rsync
     tio
+    tlrc
     uutils-coreutils-noprefix
     zoxide
   ];
@@ -36,7 +38,7 @@ in {
     "ghostty/config".text = ''
       font-family = Berkeley Mono
       font-size = 14
-      theme = Solarized Dark Higher Contrast
+      theme = dark:Solarized Dark Higher Contrast,light:rose-pine-dawn
       cursor-style = bar
     '';
     "ideavim/ideavimrc".text = ''
@@ -128,7 +130,7 @@ in {
         la = "eza -la";
         ll = "eza -ll";
       };
-      shellAbbrs = {ec = "emacsclient -c -a 'emacs' -nw";};
+      shellAbbrs = {ec = "emacsclient -nw -c -a 'emacs'";};
       loginShellInit = "zoxide init fish | source";
       interactiveShellInit =
         lib.mkIf isDarwin
