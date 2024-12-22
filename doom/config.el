@@ -32,7 +32,12 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-solarized-dark)
+;;(setq doom-theme 'doom-solarized-dark)
+
+;; Set the theme to catppuccin latte.
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'latte) ;; or 'latte, 'macchiato, or 'mocha
+(catppuccin-reload)
 
 ;; Use automatic detection of system appearance to set the theme.
 ;; The plugin is installed via packages.el.

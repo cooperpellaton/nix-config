@@ -45,36 +45,7 @@ in {
       set clipboard+=unnamed
       set relativenumber number
     '';
-    "zed/settings.json".text = ''
-      {
-        "telemetry": {
-          "metrics": false
-        },
-        "theme": {
-            "mode": "system",
-            "light": "Solarized Light",
-            "dark": "Solarized Dark",
-        },
-        "buffer_font_size": 14,
-        "buffer_font_family": "Berkeley Mono",
-        "vim_mode": true,
-        "vim": {
-          "toggle_relative_line_numbers": true
-        },
-        "soft_wrap": "preferred_line_length",
-        "assistant": {
-            "version": "2",
-            "enabled": true,
-            "default_model": {
-                "provider": "ollama",
-                "model": "llama3.2:latest"
-            }
-        },
-        "auto_install_extensions": {
-          "git_firefly": true
-        }
-      }
-    '';
+    "zed/settings.json".source = ./zed_settings.json;
     "zellij/layouts/minimal.kdl".text = ''
       layout {
         pane
