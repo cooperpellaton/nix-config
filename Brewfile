@@ -6,23 +6,27 @@ brew "ggerganov/ggerganov/hnterm"
 brew "withgraphite/tap/graphite"
 cask "1password"
 cask "adobe-creative-cloud"
+cask "android-file-transfer"
 cask "anki"
 cask "arc"
 cask "betterdisplay"
+cask "brave-browser"
 cask "chatgpt"
 cask "cleanshot"
 cask "copilot"
 cask "cursor"
 cask "dash"
 cask "devonthink"
+cask "diffusionbee"
 cask "discord"
 cask "firefox"
 cask "fujitsu-scansnap-home"
+cask "ghostty"
 cask "gitbutler"
 cask "handbrake"
-cask "iterm2"
 cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
+cask "linear-linear"
 cask "monodraw"
 cask "nextcloud"
 cask "notion"
@@ -30,6 +34,7 @@ cask "obsidian"
 cask "ollama"
 cask "omnidisksweeper"
 cask "opal-composer"
+cask "openmtp"
 cask "orbstack"
 cask "raycast"
 cask "signal"
@@ -56,8 +61,11 @@ mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "BBEdit", id: 404009241
 mas "Bike", id: 1588292384
+mas "Dark Reader for Safari", id: 1438243180
 mas "Darkroom", id: 953286746
+mas "DeArrow", id: 6451469297
 mas "Fantastical", id: 975937182
+mas "fullmoon", id: 6727014156
 mas "Goodnotes", id: 1444383602
 mas "Infuse", id: 1136220934
 mas "Ivory", id: 6444602274
@@ -73,20 +81,24 @@ mas "OmniOutliner", id: 1142578772
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "PCalc", id: 403504866
+mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "Save to Reader", id: 1640236961
 mas "Sink It for Reddit", id: 6449873635
+mas "SponsorBlock", id: 1573461917
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Vimari", id: 1480933944
 mas "VooV", id: 1497685373
 mas "WeChat", id: 836500024
+mas "Wipr", id: 1662217862
 mas "Xcode", id: 497799835
 vscode "bbenoist.nix"
 vscode "charliermarsh.ruff"
 vscode "continue.continue"
 vscode "davidanson.vscode-markdownlint"
+vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
@@ -105,7 +117,7 @@ vscode "ms-vscode-remote.remote-wsl"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
-vscode "ms-vsliveshare.vsliveshare"
+vscode "mthierman.theme-flexoki"
 vscode "orta.vscode-jest"
 vscode "oven.bun-vscode"
 vscode "redhat.vscode-yaml"
