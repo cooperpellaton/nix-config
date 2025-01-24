@@ -19,7 +19,7 @@
       "enabled": true,
       "default_model": {
           "provider": "ollama",
-          "model": "llama3.3:latest"
+          "model": "deepseek-r1:7b"
       }
   },
   "auto_install_extensions": {
