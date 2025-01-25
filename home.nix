@@ -39,7 +39,7 @@ in {
     "ghostty/config".text = ''
       font-family = Berkeley Mono
       font-size = 14
-      theme = dark:Solarized Dark Higher Contrast,light:rose-pine-dawn
+      theme = dark:Solarized Dark Higher Contrast,light:flexoki-light
       cursor-style = bar
     '';
     "ideavim/ideavimrc".text = ''
