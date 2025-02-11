@@ -22,14 +22,13 @@ in {
     nil
     nixd
     pre-commit
-    python312
-    python312Packages.ipython
     ripgrep
     rustup
     rsync
     tio
     tlrc
     uutils-coreutils-noprefix
+    uv
     zoxide
   ];
 
