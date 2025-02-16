@@ -1,12 +1,11 @@
 {pkgs ? import <nixpkgs> {}}: {
   plugins = with pkgs.vimPlugins; [
+    neoscroll-nvim
     vim-fugitive
-    supertab
     {
       plugin = lightline-vim;
       config = ''
         let g:lightline = {
-              \ 'colorscheme': 'selenized_dark',
               \ 'active': {
               \   'left': [ [ 'mode', 'paste' ],
               \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -20,20 +19,6 @@
     vim-gitgutter
     vim-wordmotion
     vim-endwise
-    float-preview-nvim
-    {
-      plugin = echodoc;
-      config = ''
-        let g:echodoc#enable_at_startup = 1
-        let g:echodoc#type = 'floating'
-        " To use a custom highlight for the float window,
-        " change Pmenu to your highlight group
-        highlight link EchoDocFloat Pmenu
-      '';
-    }
-    tagbar
-    vim-smoothie
-    zellij-nvim
   ];
   config = ''
     """""""""""
@@ -50,25 +35,11 @@
     set t_Co=256
     " Fix backspace so that it works normally
     set backspace=indent,eol,start
-    " Show existing tab with 2 spaces width
-    set tabstop=2
     " Copy indent from current line when starting a new line.
     set autoindent
-    " when indenting with '>', use 2 spaces width
-    set shiftwidth=2
-    " On pressing tab, insert 2 spaces
-    set expandtab
     " Turn case sensitive search off and smartcase search on
     set ignorecase
     set smartcase
-    " Fold based on syntax
-    set foldmethod=syntax
-    " Don't fold files by default
-    set nofoldenable
-    " Don't show the current mode on the last line (status line displays the current mode)
-    set noshowmode
-    " Limit the completion menu to 10 entries
-    set pumheight=10
     " pres // to stop highlighting results
     nmap <silent> // :nohlsearch<CR>
 
